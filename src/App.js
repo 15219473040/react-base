@@ -22,6 +22,7 @@ class App extends Component {
   }
   
   filter(e) {
+    
     this.state.val = e.target.value;
     var arr2 = [].concat(this.state.arr1);
     var arr1 = arr2.filter(item => item.name.indexOf(this.state.val) !== -1)
