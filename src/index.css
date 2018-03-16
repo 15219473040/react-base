@@ -8,3 +8,13 @@ body {
   color: red; */
   list-style: none;
 }
+.nav_itme{
+  width:100px;
+  height: 43px;
+  text-align: center;
+ display: block
+}
+.cl::after{
+  clear: both;
+  display: table;
+}
