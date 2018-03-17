@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
 import MyCom from "./MyCom.js"
-
 export default class CheckList extends Component {
     constructor(props) {
         super(props);
@@ -19,7 +18,6 @@ export default class CheckList extends Component {
             val: ""
         }
     }
-
     filter(e) {
 
         this.state.val = e.target.value;
@@ -27,7 +25,6 @@ export default class CheckList extends Component {
         var arr1 = arr2.filter(item => item.name.indexOf(this.state.val) !== -1)
         this.setState({ arr: arr1 });
     }
-
     render() {
    
         return (
@@ -38,9 +35,7 @@ export default class CheckList extends Component {
 
                     {this.state.arr.map((item, ind) => <MyCom item={item} key={ind}></MyCom>)}
 
-                </ul>
-         
-
+                </ul>       
             </div>
         );
     }
