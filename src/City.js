@@ -34,7 +34,11 @@ export default class City extends Component{
         if(tarName=="city"){
             console.log(this.pId + tar.value)
             this.setState({ valC: this.state.list_city[tar.value] })
-            this.getArray(tarName,this.pId+"_",tar.value )
+            var areaArr=this.getArray(tarName,this.pId+"_",tar.value )
+            this.setState({list_area:areaArr})
+        }
+        if(tarName=='area'){
+            this.setState({ valA: this.state.list_area[tar.value] })
         }
         // console.log(this.refs[name].props.val)
     } 
@@ -43,7 +47,10 @@ export default class City extends Component{
         if(tar=="pro"){
             this.pId=id;
         }
-        console.log(id)
+        if(tar=="city"){
+            this.cId=id;
+        }
+        console.log(id, this.state.all[id])
         return this.state.all[id]
     }
  
@@ -51,6 +58,7 @@ export default class City extends Component{
         return (<div> 
             <MySelect name="pro" ref="pro" list={this.state.list_pro||[]} onchangeHandle={this.check.bind(this)} val={this.state.valP} />
             <MySelect name="city" ref="city" list={this.state.list_city || []} onchangeHandle={this.check.bind(this)} val={this.state.valC} />
+            <MySelect name="area" ref="area" list={this.state.list_area || []} onchangeHandle={this.check.bind(this)} val={this.state.valA} />
         </div>)
     }
 }
