@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.css';
+ 
 import MyCom from "./MyCom.js"
 export default class CheckList extends Component {
     constructor(props) {

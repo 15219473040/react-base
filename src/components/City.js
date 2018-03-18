@@ -1,5 +1,5 @@
 import React,{Component} from "react"
-import dsy from "./data/area.js"
+import dsy from "../data/area.js"
 import MySelect from "./MySelect.js"
 export default class City extends Component{
     constructor(props){
