@@ -18,3 +18,31 @@ body {
   clear: both;
   display: table;
 }
+
+.outbor{
+  border:1px solid orange;
+  width: 50%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 3%;
+  padding: 3%;
+}
+.pro_table{
+   
+}
+.pro_table td,.pro_table th{      padding: 8px 15px;
+   
+    border-color: #666666;     }
+
+
+    .bold{font-weight: 600}
+
+    .t-red{
+      color: #f00;
+    }
+
+    .dis-none{
+      display: none
+    }
